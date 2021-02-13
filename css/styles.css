@@ -1,0 +1,293 @@
+:root {
+	--primal: #ffc107;
+	--secondary: #0097a7;
+	--dark: #212121;
+	--grey: #cccccc;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	min-height: 100%;
+}
+*,
+*::before,
+::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Krub", sans-serif;
+	min-height: 100%;
+	/* height: 1200px; */
+	background-image: linear-gradient(
+		to top,
+		#dad4ec 0%,
+		#dad4ec 1%,
+		#f3e7e9 100%
+	);
+	font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 3.8rem;
+}
+h2 {
+	/* font-size: 3.4rem; */
+	text-align: center;
+}
+h3 {
+	font-size: 3rem;
+	text-align: center;
+	color: var(--secondary);
+	font-weight: 400;
+}
+h4 {
+	font-size: 2.6rem;
+}
+
+p {
+	font-size: 1.8rem;
+	line-height: 2;
+}
+
+/* HEADER */
+
+.site-header {
+	background-color: white;
+}
+
+.site-header nav {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.site-header nav {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+}
+.site-header nav a {
+	color: var(--dark);
+	text-decoration: none;
+	font-size: 2.2rem;
+	transition: color 0.5s ease-in-out;
+	margin-bottom: 2rem;
+}
+.site-header nav a:last-of-type {
+	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.site-header nav a {
+		margin-bottom: 0;
+	}
+}
+
+.site-header nav a:hover {
+	color: #aaaaaa;
+}
+
+/* HERO */
+.hero {
+	height: 45rem;
+	background-image: url(../img/hero.jpg);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.container-hero {
+	position: relative;
+	color: white;
+	position: relative;
+	z-index: 1;
+	flex: 1;
+	text-align: center;
+}
+
+.container-hero i {
+	font-size: 5rem;
+	color: var(--primal);
+}
+
+.button {
+	background-color: var(--secondary);
+	padding: 1rem 5rem;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 1rem;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: rem;
+	border-radius: 0.8rem;
+	transition: background-color 0.8s ease-in-out;
+	border: none;
+}
+
+.button:hover {
+	background-color: #02616b;
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 3rem auto;
+
+	background-color: white;
+	padding: 3rem;
+	border-radius: 1rem;
+	-webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.74);
+	-moz-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.74);
+	box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.74);
+}
+
+.container-services {
+	margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+	.container-services {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.service {
+		flex: 0 0 calc(33.3% - 1rem);
+	}
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.icons {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: var(--primal);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 3rem;
+	transition: color 0.6s ease-in-out;
+	margin-top: 1rem;
+}
+
+.icons:hover {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+/* color: white; */
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		-webkit-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+form {
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	border-radius: 1rem;
+	margin-top: 3rem;
+}
+
+form legend {
+	text-align: center;
+	font-size: 2rem;
+	display: block;
+	color: #1f221e;
+	margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+	form {
+		max-width: 800px;
+		margin: 3rem auto;
+	}
+
+	.container-campos {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.campo {
+		flex: 0 0 calc(50% - 1rem);
+	}
+}
+
+.campo {
+	display: flex;
+	margin-bottom: 2rem;
+	/* align-items: center; */
+}
+
+.campo label {
+	flex: 0 0 90px;
+	padding-top: 0.5rem;
+	color: black;
+	font-weight: 700;
+}
+
+.campo input {
+	flex: 1;
+	height: 4rem;
+}
+
+.campo textarea {
+	flex: 1;
+	height: 6rem;
+}
+
+.w-100 {
+	flex: 0 0 100%;
+}
+
+.send {
+	display: flex;
+	justify-content: center;
+}
