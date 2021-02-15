@@ -20,23 +20,23 @@
 
 	<body>
 		<header class="site-header">
-			<nav>
-				<a href="#">Inicio</a>
-				<a href="#">Nosotros</a>
-				<a href="#">Clientes</a>
-				<a href="#contact">Contacto</a>
+			<nav id="navbar">
+				<a href="#inicio">Inicio</a>
+				<a href="#services">Servicios</a>
+				<a href="#we">Nosotros</a>
+				<!-- <a href="#">Clientes</a> -->
 			</nav>
 		</header>
 
-		<div class="hero">
+		<div id="inicio" class="hero">
 			<div class="container-hero">
 				<h1>Diseño y Desarrollo Freelance</h1>
 				<p><i class="fas fa-map-marker-alt"></i>Necochea, Buenos Aires</p>
-				<a href="#" class="button">Contactar</a>
+				<a href="#contact" class="button">Contactar</a>
 			</div>
 		</div>
 		<div class="container">
-			<main class="services">
+			<main id="services" class="services">
 				<h2>Nuestros Servicios</h2>
 				<div class="container-services">
 					<div class="service">
@@ -79,6 +79,12 @@
 				</div>
 			</main>
 
+			<section id="we" class="we">
+				<h2>Nosotros</h2>
+				<img src="img/we.jpg" alt="nosotros">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cum reiciendis repellendus illo inventore ex odio necessitatibus sed esse, nihil unde et qui aperiam dolor minima asperiores labore quis natus, ad cumque repellat temporibus ratione officia. Saepe porro et cumque eveniet, quos enim eius dolore.</p>
+			</section>
+
 			<section id="contact" class="contact">
 				<h2>Contacto</h2>
 				<form action="#">
@@ -103,10 +109,25 @@
 						</div>
 					</div>
 					<div class="send">
-						<input type="submit" class="button" value="Enviar"/>
+						<input type="submit" class="button" value="Enviar" />
 					</div>
 				</form>
 			</section>
 		</div>
+
+		<script>
+			window.onscroll = function () {
+				myFunction();
+			};
+
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+				if (window.pageYOffset >= sticky) {
+					navbar.classList.add("sticky");
+				} 
+			}
+		</script>
 	</body>
 </html>
