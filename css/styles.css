@@ -57,8 +57,12 @@ h4 {
 p {
 	font-size: 1.8rem;
 	line-height: 2;
+	text-align: justify;
 }
 
+.p-header {
+	text-align: unset;
+}
 /* HEADER */
 
 .site-header {
@@ -306,7 +310,7 @@ form legend {
 .campo {
 	display: flex;
 	margin-bottom: 2rem;
-	/* align-items: center; */
+	align-items: center;
 }
 
 .campo label {
@@ -319,6 +323,12 @@ form legend {
 .campo input {
 	flex: 1;
 	height: 4rem;
+}
+
+@media (max-width: 347px) {
+	.campo input {
+		max-width: 63%;
+	}
 }
 
 .campo textarea {
